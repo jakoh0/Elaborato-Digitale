@@ -1,0 +1,300 @@
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    background-color: transparent;
+    overflow: hidden;
+    background-color: #4a2b94;
+}
+
+#generale{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: #3498db;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.box:hover {
+    background-color: navy;
+    transform: scale(1.4);
+    z-index: 1000;
+}
+
+.immagine{
+    width: 150px;
+    height: 150px;
+}
+
+.box:hover .immagine{
+    transition: ease-out;
+    transition: 1s;
+    opacity: 0;
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding-top: 20%;
+    text-align: center;
+    vertical-align: baseline;
+    color: white;
+    font-size: 13px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    opacity:0;
+    transition: 1s;
+    word-wrap:break-word;
+    cursor:default;
+}
+
+.box:hover .text {
+    opacity: 1;
+}
+
+#sotto{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: hidden;
+}   
+
+.icona{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.sottosotto{
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cerchio{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 20px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#cerchio:hover{
+    transition: transform 1s, background-color 1s;
+    background-color: black;
+    color: white;
+}
+
+#riga{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+
+.grafici{
+    height: 300px;
+    width: 600px;
+}
+
+
+
+#cerchietto{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+    margin-top: 40px;
+}
+
+#frecce-alte{
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconagirata{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    margin: 5px;
+    rotate: 180deg;
+}
+
+
+
+.immaginigrandi{
+    position:absolute;
+    display: none;
+    height: 100vh;
+    width: 100%; 
+    margin-top: -22.5%;
+    margin-left: -49.6%;
+    animation: fadeIn ease 2s;
+    animation-fill-mode: forwards;
+}
+
+#ancorapiusotto{
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 100px;
+}
+
+.background{
+    background-color: grey;
+    height: 330px ;
+    width: 100px;
+    border-radius: 10px;
+    padding-left: 1.5%;
+    padding-top: 1.5%;
+}
+
+.pallinisuggestion1{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: red;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.pallinisuggestion2{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: yellow;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.pallinisuggestion3{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: green;
+    position: relative;
+    display: inline-block;
+}
+
+#ancorapiusotto > b{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+
+
+
+
+
+.pallinisuggestion3 .tooltiptext , .pallinisuggestion2 .tooltiptext , .pallinisuggestion1 .tooltiptext{
+    visibility: hidden;
+    width: 300px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    letter-spacing:2px;
+    /* Position the tooltip */
+    position: absolute;
+    top: -5px;
+    left: 150%;
+}
+
+
+.pallinisuggestion1:hover .tooltiptext , .pallinisuggestion2:hover .tooltiptext  , .pallinisuggestion3:hover .tooltiptext  {
+    visibility: visible;
+}
+
+
+
+
+
+
+/* KEYFRAMES */
+@keyframes anima1 {                     /* PRIMI GRAFICI*/
+    0%{
+        margin-top: -600px;
+    }
+    100%{
+        margin-top: 0px;
+    }
+}
+
+
+@keyframes anima2 {                     /* FRECCETTA OER TORNARE A PRIMA DEI GRAFICI*/
+    0%{
+        margin-top: 1100px;
+    }
+    100%{
+        margin-top: 40px;
+    }
+}
+
+@keyframes fadeIn {                     /* PER LE IMMAGINI*/
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
